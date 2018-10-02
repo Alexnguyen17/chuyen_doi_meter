@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+</head>
+<body>
+<h2>CHUYEN DOI GIA TRI</h2>
+<form>
+    <strong><label for ="amount">Amount</label></strong>
+    <input type="text" id="amount" value="" placeholder="Only number">
+    <strong>Measured value</strong>
+    <select id="from_Measured">
+        <option>--Please choose an option--</option>
+        <option value="meter" >METER</option>
+        <option value="feet" >FEET</option>
+    </select>
+    <strong>To Measured</strong>
+    <select id="to_Measured">
+        <option value="meter" >METER</option>
+        <option value="feet" >FEET</option>
+    </select>
+    <input type="button" value="Exchange" onclick="exchange()">
+    <input type="text" id="total" value="">
+</form>
+<script>
+    parseInt()
+    function exchange() {
+        var amount = parseFloat(document.getElementById("amount").value);
+        var from_Measured = document.getElementById("from_Measured").value;
+        var to_measured = document.getElementById("to_Measured").value;
+        var total = document.getElementById("total");
+        var result;
+        if (from_Measured === "meter" && to_measured === "feet"){
+            result = 0.305 * amount;
+        }else if (from_Measured === "meter" && to_measured === "feet"){
+            result = 3.279 * amount;
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>
